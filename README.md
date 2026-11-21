@@ -22,20 +22,40 @@ Model C is a controlled variation testing sensitivity to the initial α value.
 
 ## How to Run
 
-### Google Colab (recommended)
+### 1. Upload CIFAR-100 zip to Drive (once)
 
-1. Upload `transformer_dyt.ipynb` to Google Colab.
-2. Set the runtime to **GPU** (T4 or better): `Runtime → Change runtime type → T4 GPU`.
-3. Set `DEBUG_SMOKE_TEST = False` in the config cell (this is the default).
-4. **Run All** (`Runtime → Run all`).
-5. CIFAR-100 downloads automatically. Checkpoints are saved to Google Drive under `MyDrive/DyT_ViT_CIFAR100_Runs/`.
-6. Each model takes roughly **1 hour** on a T4 (≈ 3 hours total).
+Zip so the archive contains:
+
+```
+cifar-100-python/
+  train
+  test
+  meta
+```
+
+Upload to Google Drive as:
+
+```
+MyDrive/cifar-100-python.zip
+```
+
+(Change `DRIVE_CIFAR_ZIP` in the notebook if you use another path.)
+
+### 2. Google Colab
+
+1. Upload `transformer_dyt.ipynb` to Colab.
+2. Runtime → Change runtime type → **T4 GPU**.
+3. Keep `DEBUG_SMOKE_TEST = False`.
+4. Run all cells.
+5. The notebook mounts Drive, copies the zip → `./data`, extracts it, and trains with `download=False` (no internet dataset download).
+6. **All outputs** (checkpoints, histories, plots, tables) go to `MyDrive/DyT_ViT_CIFAR100_Runs/` so they survive disconnects.
+7. Expect ~1 hour per model on a T4 (~3 hours total).
 
 ### Resuming after a Colab disconnect
 
-1. Reconnect and select the same GPU runtime.
-2. Run all cells **up to and including** the data-loading cell.
-3. Run the training cell for the model that was interrupted — it auto-resumes from the last completed epoch via `latest_checkpoint.pt`.
+1. Reconnect with the same GPU runtime.
+2. Re-run setup through the training engine (imports → Drive mount → config → **prepare CIFAR zip** → data loaders → model classes → `run_experiment`).
+3. Run only the interrupted model’s training cell — it resumes from `latest_checkpoint.pt` on Drive.
 
 ### Local (CPU — for testing only)
 
@@ -43,11 +63,11 @@ Model C is a controlled variation testing sensitivity to the initial α value.
 pip install torch torchvision scikit-learn pandas matplotlib
 ```
 
-Set `DEBUG_SMOKE_TEST = True` in the config cell to run a 2-epoch sanity check on a small data subset.
+Use an extracted `./data/cifar-100-python/` (or a local zip). Set `DEBUG_SMOKE_TEST = True` for a 2-epoch sanity check. Outputs go to `./runs`.
 
 ## Outputs
 
-After a full run, `SAVE_DIR` contains:
+On Colab these live under `MyDrive/DyT_ViT_CIFAR100_Runs/`:
 
 ```
 ├── comparison_table.csv
