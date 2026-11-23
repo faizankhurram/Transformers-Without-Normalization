@@ -1,0 +1,5 @@
+Setting,LayerNorm Top-1,DyT Top-1,Δ (DyT − LN),Source
+ViT-B (ImageNet-1K),82.3,82.5,0.2,Reference (ImageNet-1K)
+ViT-L (ImageNet-1K),83.1,83.6,0.5,Reference (ImageNet-1K)
+"ViT-Tiny/4, CIFAR-100, DyT-ViT (α₀=0.5)",57.21,52.34,-4.87,This notebook
+"ViT-Tiny/4, CIFAR-100, DyT-ViT-Var (α₀=1.0)",57.21,53.53,-3.68,This notebook

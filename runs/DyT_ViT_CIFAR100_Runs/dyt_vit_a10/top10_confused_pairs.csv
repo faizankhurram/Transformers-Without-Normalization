@@ -1,0 +1,11 @@
+true,predicted,count,% of true class
+maple_tree,oak_tree,22,22.0
+boy,girl,17,17.0
+girl,boy,17,17.0
+dolphin,whale,16,16.0
+man,woman,15,15.0
+girl,woman,15,15.0
+plate,clock,14,14.0
+willow_tree,maple_tree,14,14.0
+oak_tree,maple_tree,14,14.0
+pickup_truck,bus,13,13.0

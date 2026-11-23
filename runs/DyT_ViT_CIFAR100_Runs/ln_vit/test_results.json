@@ -1,0 +1,18 @@
+{
+  "Model": "LayerNorm-ViT",
+  "Test Top-1 (%)": 57.21,
+  "Test Top-5 (%)": 80.33,
+  "Macro Precision": 0.5688,
+  "Macro Recall": 0.5721,
+  "Macro F1": 0.5683,
+  "Weighted F1": 0.5683,
+  "Test Loss": 2.3469,
+  "Best Val Acc (%)": 57.0,
+  "Best Epoch": 96,
+  "Total Train Time (min)": 40.47,
+  "Avg Epoch Time (s)": 24.28,
+  "Peak GPU Mem (MB)": 605.0,
+  "Params": 2710948,
+  "Epochs Trained": 100,
+  "Test Images": 10000
+}

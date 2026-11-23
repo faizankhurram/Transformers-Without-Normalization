@@ -1,0 +1,18 @@
+{
+  "Model": "DyT-ViT-Var (\u03b1\u2080=1.0)",
+  "Test Top-1 (%)": 53.53,
+  "Test Top-5 (%)": 78.31,
+  "Macro Precision": 0.531,
+  "Macro Recall": 0.5353,
+  "Macro F1": 0.5309,
+  "Weighted F1": 0.5309,
+  "Test Loss": 2.4829,
+  "Best Val Acc (%)": 55.18,
+  "Best Epoch": 97,
+  "Total Train Time (min)": 45.48,
+  "Avg Epoch Time (s)": 27.29,
+  "Peak GPU Mem (MB)": 729.4,
+  "Params": 2710961,
+  "Epochs Trained": 100,
+  "Test Images": 10000
+}

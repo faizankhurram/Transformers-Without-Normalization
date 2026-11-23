@@ -1,0 +1,11 @@
+true,predicted,count,% of true class
+maple_tree,oak_tree,26,26.0
+oak_tree,maple_tree,17,17.0
+woman,girl,16,16.0
+bus,pickup_truck,16,16.0
+couch,bed,15,15.0
+willow_tree,maple_tree,15,15.0
+willow_tree,oak_tree,15,15.0
+bicycle,motorcycle,15,15.0
+tulip,poppy,14,14.0
+girl,man,14,14.0
