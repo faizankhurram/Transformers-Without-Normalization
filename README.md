@@ -22,9 +22,12 @@ Model C is a controlled variation testing sensitivity to the initial α value.
 
 ## How to Run
 
-### 1. Upload CIFAR-100 zip to Drive (once)
+The CIFAR-100 files are not in this repository. Download them once, zip them, and put the zip on Google Drive. The notebook copies that zip onto the Colab machine and extracts it. It does not download the dataset itself.
 
-Zip so the archive contains:
+### 1. Get CIFAR-100 and upload the zip to Drive (once)
+
+1. Download the official Python version from the University of Toronto: [cifar-100-python.tar.gz](https://www.cs.toronto.edu/~kriz/cifar-100-python.tar.gz) (listed on the [CIFAR dataset page](https://www.cs.toronto.edu/~kriz/cifar.html)).
+2. Extract it. You should have a folder laid out as:
 
 ```
 cifar-100-python/
@@ -33,13 +36,14 @@ cifar-100-python/
   meta
 ```
 
-Upload to Google Drive as:
+3. Zip that folder so the archive contains the `cifar-100-python/` directory (not only the three files at the top level).
+4. Upload the zip to Google Drive as:
 
 ```
 MyDrive/cifar-100-python.zip
 ```
 
-(Change `DRIVE_CIFAR_ZIP` in the notebook if you use another path.)
+Change `DRIVE_CIFAR_ZIP` in the notebook if you use another path.
 
 ### 2. Google Colab
 
